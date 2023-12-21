@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flappy Bird</title>
+    <link rel="stylesheet" href="flappyStyles.css">
+</head>
+<body>
+    <div id="game">
+         <!--has all elements displayed in div-->
+        <div id="pipe"></div>
+        <div id="gap">
+            <div id="topLid"></div>
+            <div id="bottomLid"></div>
+        </div>
+        <div id="bird"><img id="birdIcon" src="data:image/png;base64,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" width="20px" border-radius:50%></div>
+    
+
+        <div id="cmod" class="popUp">
+            <h1>Select Your Character !</h1>
+            <button id="btnRed" onclick="red()">Red Bird</button>
+            <button id="btnBlue" onclick="blue()">Blue Bird</button>
+            <button id="btnYellow" onclick="yellow()">Yellow Bird</button>
+        </div>
+
+        <button id="menu" onclick="showSettings()">SETTINGS</button>
+    
+    <script src="flappyScript.js"></script>
+</body>
+
+</html>

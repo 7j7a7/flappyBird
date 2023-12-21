@@ -1,0 +1,95 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+#game{
+    width: 400px;
+    height: 500px;
+    border: 1px solid rgb(231, 64, 64);
+    margin: auto;
+    overflow: hidden;
+    background-color: lightblue;
+}
+
+#pipe{
+    width: 50px;
+    height: 500px;
+    position: relative;
+    left: 400px;
+    /* faster */
+    /* animation: pipe 1s infinite linear; */
+    /* slower */
+    animation: pipe 2s infinite linear;
+
+    background:linear-gradient(90deg,white 1px,green, white 5px,green 30px) ;
+    border:2px solid rgb(36, 28, 28);
+    border-right: none;
+}
+
+@keyframes pipe{
+    0%{left:400px}
+    100%{left:-50px}
+}
+@keyframes gap {
+    0% {
+        left: 390px;
+    }
+    100% {
+        left: -50px;
+    }
+}
+#gap {
+    width: 60px;
+    height: 180px;
+    background-color:lightblue;
+    position: relative;
+    left: 600px;
+    /* faster */
+    /* animation: gap 1s infinite linear; */
+    /* slower */
+    animation: gap 2s infinite linear;
+}
+#topLid, #bottomLid{
+    width:90px;
+    height:36px;
+    background:linear-gradient(90deg,white 1px,green 1px, white 5px,green 30px) ;
+    border:2px solid rgb(36, 28, 28);
+    border-left: 1px solid grey;
+    margin: -15px;
+}
+
+#topLid{
+    border-top: none;
+}
+#bottomLid{
+    border-bottom: none;
+    position: absolute;
+    bottom: 0;
+}
+#bird{
+    height: 20px;
+    position: absolute;
+    top: 100px;
+}
+
+#birdIcon{
+    border-radius: 50%;
+}
+
+#menu{
+    position: absolute;
+bottom:20px;
+}
+/* flappyStyles.css */
+.popUp {
+    display: none;
+    position: fixed;
+    top: 10%;
+    left: 35%;
+    width: 30%;
+    height: 50%;
+    background-color: #d47777;
+    padding: 20px;
+    text-align: center;
+    z-index: 1000; /*highest index value so it appears infront of everything else*/
+}
